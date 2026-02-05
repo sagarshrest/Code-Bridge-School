@@ -104,15 +104,49 @@ class _LoginPageState extends State<LoginPage> {
                     ],
                   )),
                 ),
+
+                SizedBox(
+                  height: 25,
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 115.0),
+                  child: Container(
+                    height: 18,
+                    child: Text("Or Continue With",
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w800,
+                    ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 25,),
+
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 102.0),
+                  child: Container(height: 48,
+                    child: Image.asset("assets/images/Social Media.png",
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 51,
+                ),
                 
-                Row(
-                  children: [
-                    InkWell(
-                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (contexxt)=>SignUpPage())),
-
-
-                      child: Text("Don’t have an Account? SIGN UP")),
-                  ],
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 104-24),
+                  child: Row(
+                    children: [
+                      Text("Don’t have an Account? "),
+                      InkWell(
+                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (contexxt)=>SignUpPage())),
+                        child: Text("SIGN UP",
+                        style: TextStyle(
+                          color: Colors.blue,
+                        ),)),
+                    ],
+                  ),
                 )
               
             
