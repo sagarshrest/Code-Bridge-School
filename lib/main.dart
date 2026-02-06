@@ -1,3 +1,4 @@
+import 'package:code_bridge_school/Auth/Auth/home/course/course_detail_page.dart';
 import 'package:code_bridge_school/Auth/Auth/login_page.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(debugShowCheckedModeBanner: false,
       
-      home: LoginPage(),
+      home: CourseDetailPage(),
     );
   }
 }
