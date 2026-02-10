@@ -45,7 +45,7 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
                       SizedBox(height: 74+306,),
                       
                       Container(
-                        height: 493,
+                        height: 940,
                         color: const Color.fromARGB(255, 202, 199, 199),
                       ),
                     ],
@@ -147,7 +147,7 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
                                        Container(
                                           height: 52,
                                           width: 175,
-                                          color: Colors.blue,
+                                          color: Colors.blue[200],
                                           child:Padding(
                                         padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 16),
                                         child: Text("About",
@@ -169,22 +169,35 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
                               ),),],
                                   ),
                                   SizedBox(height:17 ,),
-                              Text("Graphic Design now a popular profession graphic design by off your carrer about tantas regiones barbarorum pedibus obiit"),
-                                
-                                Column(
-                                  children: [
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                                    child: Text("Graphic Design now a popular profession graphic\ndesign by off your carrer about tantas regione\nbarbarorum pedibus obiit"),
+                                  ),
+                                ],
+                              ),
+                                SizedBox(height: 20,),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                                  child: Row(
+                                    children: [
+                                      
                                     
-                                  
-                                Text("Graphic Design n a popular profession l Cur tantas regiones barbarorum pedibus obiit, maria transmi Et ne nimium beatus est; Addidisti ad extremum etiam",
-                                style: TextStyle(
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.w700,),),
-                                  
-                                Text("Read More",
-                                style: TextStyle(
-                                  color: Colors.blue,
-                                )),
-                            ],
+                                  Text("Graphic Design n a popular profession l Cur tantas\nregiones barbarorum pedibus obiit, maria transmi\nEt ne nimium beatus est; Addidisti ad extremum\netiam Read More",
+                                  style: TextStyle(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w700,),),
+                                    
+                                  // Padding(
+                                  //   padding: const EdgeInsets.only(top: 20.0),
+                                  //   child: Text("Read More",
+                                  //   style: TextStyle(
+                                  //     color: Colors.blue,
+                                  //   )),
+                                  // ),
+                                                              ],
+                                  ),
                                 ),],
                           ),
                           
@@ -320,43 +333,46 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
                                 ),
                               ],
                             ),
-                            SizedBox(height: 20,),
-                  Container(
-                  height: 60,
-                  child: ElevatedButton(
+                            SizedBox(height: 30,),
+                  
+                  ElevatedButton(
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
-                      
                     ),
                     onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (_){
-                        return HomePage();
-                      }));
-                    }, child: 
-                  Row(
+
+                  }, child: 
+                  Column(
                     children: [
-                      SizedBox(
-                        
+                      Row(
+                        children: [
+                          Container(
+                            height: 60,
+                            child: Padding(
+                              padding: const EdgeInsets.only(top: 16.0, left: 52),
+                              child: Text("Enroll Courses - 499/-",
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.white,
+                              ),),
+                            ),
+                          ),
+                          SizedBox(width: 32,),
+                          
+                          Spacer(),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(100),
+                            child: Container(
+                              height: 39,
+                              width: 39,
+                              color: Colors.white,
+                              child: Icon(Icons.arrow_forward),
+                            ),
+                          )
+                        ],
                       ),
-                      Spacer(),
-                      Text("Enroll Course - 499/-",
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600
-                      ),),
-                      Spacer(),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(100),
-                        child: Container(
-                          height: 35,
-                          width: 35,
-                          color: Colors.white,
-                          child: Icon(Icons.arrow_forward),
-                        ),
-                      )
                     ],
                   )),
-                ),
 
                 SizedBox(height: 50,)
                               
