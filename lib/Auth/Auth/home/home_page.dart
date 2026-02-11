@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -224,6 +225,8 @@ class HomePage extends StatelessWidget {
                     physics: BouncingScrollPhysics(),
                     itemCount: 10,
                     itemBuilder: (Context,index){
+
+                      
                     return Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: Row(
@@ -305,9 +308,142 @@ class HomePage extends StatelessWidget {
                       ),
                     );}
                                 ),
-                )
-                
-            
+                ),
+                SizedBox(height: 20,),
+
+                SizedBox(height: 240,width: 280,
+                child:ListView.builder(
+                scrollDirection: Axis.horizontal,
+                shrinkWrap: true,
+                physics: BouncingScrollPhysics(),
+                itemCount: 10,
+                itemBuilder: (context, index){
+
+                return Padding(
+                  padding: const EdgeInsets.only(left: 16.0),
+                  child: Stack(
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.black
+                            ),
+                            height: 240,
+                            width: 280,
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          
+                          Padding(
+                            padding: const EdgeInsets.only(top: 120.0),
+                            child: Container(
+                              height: 120,
+                              width: 280,
+                              decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20)),
+                              color: Colors.white
+                            ),
+                            child: Column(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(horizontal: 14.0),
+                                  child: Row(
+                                    children: [
+                                      Text("Graphics Design",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w700,
+                                        color: Colors.orange
+                                      ),),
+                                      Spacer(),
+                                      Icon(Icons.bookmark_border_outlined, color: Colors.green,)
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 7.0, left: 14),
+                                  child: Row(
+                                    children: [
+                                      Text("Graphics Design Advanced",
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w800,
+                                      ),),
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 8,left: 16.0),
+                                  child: Row(
+                                    children: [
+                                      Text("850/-",
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.blue,
+                                      ),),
+                                  
+                                      Padding(
+                                        padding: const EdgeInsets.only(left: 7.0),
+                                        child: Text("|",
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w800,
+                                          
+                                        ),),
+                                      ),
+                                  
+                                      Padding(
+                                        padding: const EdgeInsets.only(left: 16.0),
+                                        child: Icon(Icons.star,
+                                        size: 18,
+                                        color: Colors.orange,),
+                                      ),
+                                  
+                                      Padding(
+                                        padding: const EdgeInsets.only(left: 3.0),
+                                        child: Text("4.2",
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                        ),),
+                                      ),
+                                  
+                                     Padding(
+                                       padding: const EdgeInsets.only(left: 8.0),
+                                       child: Text("|",
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                        ),),
+                                     ),
+                                  
+                                     Padding(
+                                       padding: const EdgeInsets.only(left: 16.0),
+                                       child: Text("7830 Std",
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                        ),),
+                                     ),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),);
+                    },),),
+
+                SizedBox(height: 50,)
               ],
             ),
           ),
