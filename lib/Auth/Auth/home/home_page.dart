@@ -311,7 +311,7 @@ class HomePage extends StatelessWidget {
                 ),
                 SizedBox(height: 20,),
 
-                SizedBox(height: 240,width: 280,
+                SizedBox(height: 240,
                 child:ListView.builder(
                 scrollDirection: Axis.horizontal,
                 shrinkWrap: true,
@@ -339,7 +339,7 @@ class HomePage extends StatelessWidget {
                         children: [
                           
                           Padding(
-                            padding: const EdgeInsets.only(top: 120.0),
+                            padding: const EdgeInsets.only(top: 120.0,),
                             child: Container(
                               height: 120,
                               width: 280,
@@ -443,6 +443,67 @@ class HomePage extends StatelessWidget {
                   ),);
                     },),),
 
+                SizedBox(height: 65,),
+
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Row(
+                    children: [
+                      Text("Top Mentor",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600
+                      ),),
+                      Spacer(),
+                      Text("SEE ALL",
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w800,
+                        color: Colors.blue,
+                      ),),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8.0),
+                        child: Icon(Icons.arrow_forward_ios,
+                        color: Colors.blue,
+                        size: 16,),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 15,),
+                SizedBox(height: 100,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    shrinkWrap: true,
+                    physics: BouncingScrollPhysics(),
+                    itemCount: 10,
+                    itemBuilder: (context, index) {
+                      return Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                        child: Column(
+                                            children: [
+                        Column(
+                          children: [
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.black
+                              ),
+                              height: 80,
+                              width: 70,
+                              
+                            ),
+                          ],
+                        ),
+                        Text("Jiya",
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600
+                        ),)
+                                            ],
+                                          ),
+                      );},),
+                ),
                 SizedBox(height: 50,)
               ],
             ),
