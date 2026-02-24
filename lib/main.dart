@@ -3,6 +3,7 @@ import 'package:code_bridge_school/Auth/Auth/home/category.dart';
 import 'package:code_bridge_school/Auth/Auth/home/course/course_detail_page.dart';
 import 'package:code_bridge_school/Auth/Auth/home/home_page.dart';
 import 'package:code_bridge_school/Auth/Auth/login_page.dart';
+import 'package:code_bridge_school/notifiactions.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(debugShowCheckedModeBanner: false,
       
-      home: AddCourses(),
+      home: Notifiactions(),
     );
   }
 }
