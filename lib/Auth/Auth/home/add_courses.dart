@@ -200,7 +200,32 @@ class AddCourses extends StatelessWidget {
                 ),
               ),
 
-              SizedBox(height: 50,)
+              SizedBox(height: 30,),
+
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                child: Container(
+                  height: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    color: Colors.blue,
+                  ),
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 130.0),
+                        child: Text("Submit",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white
+                        ),),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 30,)
             ],
           ),
         ),
